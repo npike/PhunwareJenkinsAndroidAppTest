@@ -5,13 +5,16 @@
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="14" />
-
+    <!--
+    This declares that this application uses the custom android junit report runner targeting
+    the package of com.zutubi.android.junitreport.example.  To run the tests use the command:
+    "adb shell am instrument -w com.zutubi.android.junitreport.example.tests/com.zutubi.android.junitreport.JUnitReportTestRunner"
+    -->
     <instrumentation
-        android:name="android.test.InstrumentationTestRunner"
+        android:name="com.zutubi.android.junitreport.JUnitReportTestRunner"
         android:targetPackage="com.phunware.jenkinsandroidapp" />
 
     <application
-        android:name="com.zutubi.android.junitreport.JUnitReportTestRunner"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <uses-library android:name="android.test.runner" />
